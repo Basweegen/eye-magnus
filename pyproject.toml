@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eye-magnus"
+version = "0.1.0"
+description = "Magnus System Health Monitoring - real-time host and local LLM health from the command line"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Basweegen" }]
+dependencies = ["psutil>=5.9"]
+
+[project.scripts]
+eye-magnus = "eye_magnus.cli:main"
+
+[tool.setuptools]
+packages = ["eye_magnus"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
